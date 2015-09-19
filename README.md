@@ -1,15 +1,90 @@
-# :package_name
+# Laravel Mentions
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Latest Stable Version](https://poser.pugx.org/busayo/laravel-mentions/v/stable.svg)](https://packagist.org/packages/busayo/laravel-mentions)
+[![Latest Unstable Version](https://poser.pugx.org/busayo/laravel-mentions/v/unstable.svg)](https://packagist.org/packages/busayo/laravel-mentions)
+[![License](https://poser.pugx.org/busayo/laravel-mentions/license.svg)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/busayo/laravel-mentions.svg)](https://travis-ci.org/busayo/laravel-mentions)
+[![Quality Score](https://img.shields.io/scrutinizer/g/busayo/laravel-mentions.svg?style=flat-square)](https://scrutinizer-ci.com/g/busayo/laravel-mentions)
+[![Total Downloads](https://img.shields.io/packagist/dt/busayo/laravel-mentions.svg?style=flat-square)](https://packagist.org/packages/busayo/laravel-mentions)
 
+This package makes it possible to create text/textarea fields that enable **mentioning** by using [At.js](https://github.com/ichord/At.js).
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+The data for the autocomplete is loaded from a route which will load data based on predefined key-value pairs of an alias and a model in the config.
+
+## Installation
+
+First, pull in the package through Composer.
+
+```js
+"require": {
+    "busayo/laravel-mentions": "1.0.*"
+}
+```
+
+And then include these service providers within `config/app.php`.
+
+```php
+'providers' => [
+    Busayo\Mention\MentionServiceProvider::class,
+    Collective\Html\HtmlServiceProvider::class,
+];
+```
+
+If you need to modify the configuration or the views, you can run:
+
+```bash
+php artisan vendor:publish
+```
+
+The package views will now be located in the `app/resources/views/vendor/mentions/` directory and the configuration will be located at `config/mentions.php`.
+
+## Configuration
+
+To make it possible for At.js to load data we need to define key-value pairs that consist of an alias and a corresponding model.
+
+```php
+return [
+
+    'users'    => 'App\User',      // responds to /api/mentions/users
+    'friends'  => 'App\Friend',    // responds to /api/mentions/friends
+    'clients'  => 'App\Client',    // responds to /api/mentions/clients
+    'supports' => 'App\Supporter', // responds to /api/mentions/supports
+
+];
+```
+
+So now with these `aliases` configured we could create a new textfield which will send a request to the `users` route and search for matching data in the `name` column.
+
+```php
+{!! mention()->asText('recipient', old('recipient'), 'users', 'name') !!}
+```
+
+## Example
+
+```html
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laravel PHP Framework</title>
+        <link rel="stylesheet" type="text/css" href="/styles/jquery.atwho.min.css">
+         <!-- Requirements -->
+        <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="/js/jquery.atwho.min.js"></script>
+        <script src="/js/jquery.caret.min.js"></script>
+        <!-- Laravel Mentions -->
+        @include('mentions::assets')
+    </head>
+
+    <body>
+        <div class="container">
+            {!! mention()->asText('recipient', old('recipient'), 'users', 'name') !!}
+            {!! mention()->asTextArea('message', old('message'), 'users', 'name') !!}
+        </div><!-- /.container -->
+    </body>
+</html>
+```
+
 
 ## Install
 
@@ -46,23 +121,9 @@ If you discover any security related issues, please email :author_email instead 
 
 ## Credits
 
-- [Prosper Otemuyiwa][link-author]
+- [Prosper Otemuyiwa](https://twitter.com/unicodeveloper)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/league/:package_name.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/thephpleague/:package_name/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/thephpleague/:package_name.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/thephpleague/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/league/:package_name.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/league/:package_name
-[link-travis]: https://travis-ci.org/thephpleague/:package_name
-[link-scrutinizer]: https://scrutinizer-ci.com/g/thephpleague/:package_name/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/thephpleague/:package_name
-[link-downloads]: https://packagist.org/packages/league/:package_name
-[link-author]: https://github.com/:author_username
-[link-contributors]: ../../contributors
