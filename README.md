@@ -94,13 +94,6 @@ Via Composer
 $ composer require busayo/laravel-mentions
 ```
 
-## Usage
-
-``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
-```
-
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
@@ -115,9 +108,6 @@ $ composer test
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security
-
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
 
 ## Credits
 
