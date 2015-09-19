@@ -67,7 +67,7 @@ So now with these `aliases` configured we could create a new textfield which wil
     <head>
         <meta charset="UTF-8">
         <title>Laravel PHP Framework</title>
-        <link rel="stylesheet" type="text/css" href="/styles/jquery.atwho.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/jquery.atwho.min.css">
          <!-- Requirements -->
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="/js/jquery.atwho.min.js"></script>
