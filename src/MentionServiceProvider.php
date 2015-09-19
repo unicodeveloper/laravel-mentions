@@ -34,7 +34,7 @@ class MentionServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'mentions');
 
          if (! $this->app->routesAreCached()) {
-            require __DIR__.'/../Http/routes.php';
+            require __DIR__.'/Http/routes.php';
         }
     }
 
