@@ -59,6 +59,12 @@ So now with these `aliases` configured we could create a new textfield which wil
 {!! mention()->asText('recipient', old('recipient'), 'users', 'name') !!}
 ```
 
+You can also add a class name for styling of the text and textareas, that's the last argument. In this example, it is `user-form`
+
+```php
+{!! mention()->asText('recipient', old('recipient'), 'users', 'name', 'user-form') !!}
+```
+
 ## Example
 
 ```html
