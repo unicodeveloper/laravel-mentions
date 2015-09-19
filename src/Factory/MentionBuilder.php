@@ -9,10 +9,15 @@ use Illuminate\Routing\UrlGenerator as UrlGenerator;
 class MentionBuilder extends FormBuilder
 {
 
-  public function __construct(HtmlBuilder $html, UrlGenerator $url)
-  {
-     parent::__construct($html, $url, csrf_token());
-  }
+    /**
+     *  Create an instance of Mention builder and also call Form Builder's constructor
+     * @param HtmlBuilder  $html [description]
+     * @param UrlGenerator $url  [description]
+     */
+    public function __construct(HtmlBuilder $html, UrlGenerator $url)
+    {
+        parent::__construct($html, $url, csrf_token());
+    }
 
 
     /**

@@ -15,6 +15,10 @@ class MentionServiceProvider extends ServiceProvider
     protected $defer = false;
 
 
+    /**
+     *  Publishes all the assets this package needs to function and load all routes
+     * @return [type] [description]
+     */
     public function boot()
     {
         $config = realpath(__DIR__.'/../resources/config/mentions.php');
