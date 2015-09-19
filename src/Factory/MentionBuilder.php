@@ -30,11 +30,12 @@ class MentionBuilder extends FormBuilder
      *
      * @return string
      */
-    public function asText($name, $value, $type, $column)
+    public function asText($name, $value, $type, $column, $class = '')
     {
 
         $input = $this->text($name, $value, [
             'id' => 'mention-'.$name,
+            'class' => $class
         ]);
 
 
@@ -59,10 +60,11 @@ class MentionBuilder extends FormBuilder
      *
      * @return string
      */
-    public function asTextArea($name, $value, $type, $column)
+    public function asTextArea($name, $value, $type, $column, $class = '')
     {
         $input = $this->textarea($name, $value, [
             'id' => 'mention-'.$name,
+            'class' => $class
         ]);
 
         $scriptTag =
