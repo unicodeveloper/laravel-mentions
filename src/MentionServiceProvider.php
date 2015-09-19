@@ -17,13 +17,21 @@ class MentionServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->setup(__DIR__)
-             ->publishConfig()
-             ->publishViews()
-             ->publishAssets()
-             ->loadViews()
-             ->loadRoutes()
-             ->mergeConfig('mentions');
+        $config = realpath(__DIR__.'/../resources/config/mentions.php');
+        $views  = realpath(__DIR__.'/../resources/views');
+        $script = realpath(__DIR__.'/../resources/assets');
+
+        $this->publishes([
+            $config => config_path('mentions.php'),
+            $views  => base_path('resources/views/vendor/mentions'),
+            $script => public_path('js'),
+        ]);
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'mentions');
+
+         if (! $this->app->routesAreCached()) {
+            require __DIR__.'/../Http/routes.php';
+        }
     }
 
 
