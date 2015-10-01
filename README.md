@@ -1,7 +1,7 @@
 # Laravel Mentions
 
 [![Latest Stable Version](https://poser.pugx.org/busayo/laravel-mentions/v/stable.svg)](https://packagist.org/packages/busayo/laravel-mentions)
-[![Latest Unstable Version](https://poser.pugx.org/busayo/laravel-mentions/v/unstable.svg)](https://packagist.org/packages/busayo/laravel-mentions)
+![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
 [![License](https://poser.pugx.org/busayo/laravel-mentions/license.svg)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/busayo/laravel-mentions.svg)](https://travis-ci.org/busayo/laravel-mentions)
 [![Quality Score](https://img.shields.io/scrutinizer/g/busayo/laravel-mentions.svg?style=flat-square)](https://scrutinizer-ci.com/g/busayo/laravel-mentions)
