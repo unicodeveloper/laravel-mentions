@@ -97,7 +97,7 @@ You can also add a class name for styling of the text and textareas, that's the 
 Via Composer
 
 ``` bash
-$ composer require busayo/laravel-mentions
+$ composer require unicodeveloper/laravel-mentions
 ```
 
 ## Change log
