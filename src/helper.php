@@ -8,6 +8,6 @@ if (! function_exists('mention')) {
      */
     function mention()
     {
-        return app('\Busayo\Mention\Factory\MentionBuilder');
+        return app('\Unicodeveloper\Mention\Factory\MentionBuilder');
     }
 }

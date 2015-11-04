@@ -1,9 +1,9 @@
 <?php
 
-namespace Busayo\Mention;
+namespace Unicodeveloper\Mention;
 
-use Busayo\Mention\Factory\MentionBuilder;
 use Illuminate\Support\ServiceProvider;
+use Unicodeveloper\Mention\Factory\MentionBuilder;
 
 class MentionServiceProvider extends ServiceProvider
 {

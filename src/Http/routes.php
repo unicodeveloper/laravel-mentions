@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/api/mentions/{type}', 'Busayo\Mention\Http\Controllers\ApiController@index');
+Route::get('/api/mentions/{type}', 'Unicodeveloper\Mention\Http\Controllers\ApiController@index');

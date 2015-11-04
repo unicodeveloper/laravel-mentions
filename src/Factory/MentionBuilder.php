@@ -1,6 +1,6 @@
 <?php
 
-namespace Busayo\Mention\Factory;
+namespace Unicodeveloper\Mention\Factory;
 
 use Collective\Html\FormBuilder as FormBuilder;
 use Collective\Html\HtmlBuilder as HtmlBuilder;

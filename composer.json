@@ -1,14 +1,15 @@
 {
-    "name": "busayo/laravel-mentions",
+    "name": "unicodeveloper/laravel-mentions",
     "description": "Laravel 5 package that provides facebook-like mention functionality",
     "keywords": [
         "laravel",
+        "laravel 5",
         "laravel-mentions",
         "facebook-mentions",
         "autocomplete",
         "smart search"
     ],
-    "homepage": "https://github.com/busayo/laravel-mentions",
+    "homepage": "https://github.com/unicodeveloper/laravel-mentions",
     "license": "MIT",
     "authors": [
         {
@@ -28,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Busayo\\Mention\\": "src"
+            "Unicodeveloper\\Mention\\": "src"
         },
         "files": [
             "src/helper.php"
@@ -36,7 +37,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Busayo\\Mention\\Test\\": "tests"
+            "Unicodeveloper\\Mention\\Test\\": "tests"
         }
     },
     "scripts": {

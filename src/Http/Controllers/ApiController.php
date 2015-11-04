@@ -1,6 +1,6 @@
 <?php
 
-namespace Busayo\Mention\Http\Controllers;
+namespace Unicodeveloper\Mention\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

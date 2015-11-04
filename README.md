@@ -1,11 +1,11 @@
-# Laravel Mentions
+# laravel-mentions
 
-[![Latest Stable Version](https://poser.pugx.org/busayo/laravel-mentions/v/stable.svg)](https://packagist.org/packages/busayo/laravel-mentions)
+[![Latest Stable Version](https://poser.pugx.org/unicodeveloper/laravel-mentions/v/stable.svg)](https://packagist.org/packages/unicodeveloper/laravel-mentions)
 ![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
-[![License](https://poser.pugx.org/busayo/laravel-mentions/license.svg)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/busayo/laravel-mentions.svg)](https://travis-ci.org/busayo/laravel-mentions)
-[![Quality Score](https://img.shields.io/scrutinizer/g/busayo/laravel-mentions.svg?style=flat-square)](https://scrutinizer-ci.com/g/busayo/laravel-mentions)
-[![Total Downloads](https://img.shields.io/packagist/dt/busayo/laravel-mentions.svg?style=flat-square)](https://packagist.org/packages/busayo/laravel-mentions)
+[![License](https://poser.pugx.org/unicodeveloper/laravel-mentions/license.svg)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-mentions.svg)](https://travis-ci.org/unicodeveloper/laravel-mentions)
+[![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-mentions.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-mentions)
+[![Total Downloads](https://img.shields.io/packagist/dt/unicodeveloper/laravel-mentions.svg?style=flat-square)](https://packagist.org/packages/unicodeveloper/laravel-mentions)
 
 This package makes it possible to create text/textarea fields that enable **mentioning** by using [At.js](https://github.com/ichord/At.js).
 
@@ -17,7 +17,7 @@ First, pull in the package through Composer.
 
 ```js
 "require": {
-    "busayo/laravel-mentions": "1.0.*"
+    "unicodeveloper/laravel-mentions": "1.1.*"
 }
 ```
 
@@ -25,7 +25,7 @@ And then include these service providers within `config/app.php`.
 
 ```php
 'providers' => [
-    Busayo\Mention\MentionServiceProvider::class,
+    Unicodeveloper\Mention\MentionServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
 ];
 ```

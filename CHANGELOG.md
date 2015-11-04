@@ -2,7 +2,7 @@
 
 All Notable changes to laravel-mentions will be documented in this file
 
-## NEXT - YYYY-MM-DD
+## 2015-11-04
 
 ### Added
 - Nothing
@@ -11,7 +11,7 @@ All Notable changes to laravel-mentions will be documented in this file
 - Nothing
 
 ### Fixed
-- Nothing
+- Changed namespace from Busayo to Unicodeveloper
 
 ### Removed
 - Nothing
