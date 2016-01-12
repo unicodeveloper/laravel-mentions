@@ -114,10 +114,14 @@ $ composer test
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
+## How can I thank you?
 
-## Credits
+Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter or HackerNews? Spread the word!
 
-- [Prosper Otemuyiwa](https://twitter.com/unicodeveloper)
+Don't forget to [follow me on twitter](https://twitter.com/unicodeveloper)!
+
+Thanks!
+Prosper Otemuyiwa.
 
 ## License
 
