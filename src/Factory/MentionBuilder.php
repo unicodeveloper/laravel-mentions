@@ -29,6 +29,7 @@ class MentionBuilder extends FormBuilder
      * @param string $value
      * @param string $type
      * @param string $column
+     * @param string $class
      *
      * @return string
      */
@@ -36,18 +37,18 @@ class MentionBuilder extends FormBuilder
     {
 
         $input = $this->text($name, $value, [
-            'id' => 'mention-'.$name,
+            'id' => 'mention-' . $name,
             'class' => $class
         ]);
 
 
-        $scriptTag =
-
-        '<script type="text/javascript">
-            $(function(){
-                enableMentions("#mention-'.$name.'", "'.$type.'", "'.$column.'");
-            });
-        </script>';
+$scriptTag = <<< EOT
+    <script type="text/javascript">
+        $(function(){
+            enableMentions("#mention-$name", "$type", "$column");
+        });
+    </script>
+EOT;
 
         return $scriptTag.$input;
     }
@@ -59,22 +60,24 @@ class MentionBuilder extends FormBuilder
      * @param string $value
      * @param string $type
      * @param string $column
+     * @param string $class
      *
      * @return string
      */
     public function asTextArea($name, $value, $type, $column, $class = '')
     {
         $input = $this->textarea($name, $value, [
-            'id' => 'mention-'.$name,
+            'id' => 'mention-' . $name,
             'class' => $class
         ]);
 
-        $scriptTag =
-        '<script type="text/javascript">
-            $(function(){
-                enableMentions("#mention-'.$name.'", "'.$type.'", "'.$column.'");
-            });
-        </script>';
+$scriptTag = <<< EOT
+    <script type="text/javascript">
+        $(function(){
+            enableMentions("#mention-$name", "$type", "$column");
+        });
+    </script>
+EOT;
 
         return $scriptTag.$input;
     }
