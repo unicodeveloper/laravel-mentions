@@ -5,18 +5,20 @@ namespace Unicodeveloper\Mention\Factory;
 use Collective\Html\FormBuilder as FormBuilder;
 use Collective\Html\HtmlBuilder as HtmlBuilder;
 use Illuminate\Routing\UrlGenerator as UrlGenerator;
+use Illuminate\Contracts\View\Factory as ViewFactory;
 
 class MentionBuilder extends FormBuilder
 {
 
     /**
      *  Create an instance of Mention builder and also call Form Builder's constructor
-     * @param HtmlBuilder  $html [description]
-     * @param UrlGenerator $url  [description]
+     * @param HtmlBuilder $html [description]
+     * @param UrlGenerator $url [description]
+     * @param ViewFactory $view [description]
      */
-    public function __construct(HtmlBuilder $html, UrlGenerator $url)
+    public function __construct(HtmlBuilder $html, UrlGenerator $url, ViewFactory $view)
     {
-        parent::__construct($html, $url, csrf_token());
+        parent::__construct($html, $url, $view, csrf_token());
     }
 
 
