@@ -10,15 +10,18 @@ class ApiController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param $type
+     * @param Request $request
      * @return Response
      */
     public function index($type, Request $request)
     {
         try {
+            $resultColumns = [];
             $query = $request->get('q');
             $column = $request->get('c');
 
-            $model = app()->make(config('mentions.'.$type));
+            $model = app()->make(config('mentions.' . $type));
 
             $records = $model->where($column, 'LIKE', "%$query%")
                              ->get([$column]);
