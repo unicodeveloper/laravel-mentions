@@ -35,7 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Unicodeveloper\\Mention\\": "src"
+            "Omidmaldar\\Mention\\": "src"
         },
         "files": [
             "src/helper.php"
@@ -43,7 +43,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Unicodeveloper\\Mention\\Test\\": "tests"
+            "Omidmaldar\\Mention\\Test\\": "tests"
         }
     },
     "scripts": {
