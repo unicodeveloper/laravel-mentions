@@ -1,5 +1,5 @@
 {
-    "name": "unicodeveloper/laravel-mentions",
+    "name": "omidmaldar/laravel-mentions",
     "description": "Laravel 5 package that provides facebook-like mention functionality",
     "keywords": [
         "laravel",
@@ -7,9 +7,10 @@
         "laravel-mentions",
         "facebook-mentions",
         "autocomplete",
-        "smart search"
+        "smart search",
+        "Neo4j Compatible"
     ],
-    "homepage": "https://github.com/unicodeveloper/laravel-mentions",
+    "homepage": "https://github.com/omidmaldar/laravel-mentions",
     "license": "MIT",
     "authors": [
         {
@@ -17,6 +18,11 @@
             "email": "prosperotemuyiwa@gmail.com",
             "homepage": "https://twitter.com/unicodeveloper",
             "role": "Developer"
+        }
+        {
+            "name": "Omid Maldar",
+            "email": "maldar@gmail.com",
+            "role": "contributor"
         }
     ],
     "require": {
