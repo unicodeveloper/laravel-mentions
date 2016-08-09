@@ -23,8 +23,8 @@ class ApiController extends Controller
 
             $model = app()->make(config('mentions.' . $type));
 
-            $records = $model->where($column, 'LIKE', "%$query%")
-                             ->get([$column]);
+            $records = $model->where($column, '=~', '.*'.$query.'.*')
+                             ->get();
 
             foreach ($records as $record) {
                 $resultColumns[] = $record->$column;
